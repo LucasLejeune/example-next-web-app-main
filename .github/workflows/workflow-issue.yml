@@ -10,7 +10,7 @@ jobs:
     steps:
       - run: gh issue comment $ISSUE_URL --body "Thanks for opening this issue"
         env:
-          GH_TOKEN: ${{ secret.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_URL:  ${{ github.event.issue.html_url }}
   output: 
     runs-on: ubuntu-latest
