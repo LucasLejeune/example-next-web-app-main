@@ -20,4 +20,4 @@ jobs:
       - name: avec venv
         env: 
          TITRE: ${{github.event.issue.title}}
-         run: echo Nouvelle issue - "$TITRE"
+        - run: echo Nouvelle issue - "$TITRE"
