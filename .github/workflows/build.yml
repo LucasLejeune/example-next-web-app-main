@@ -11,6 +11,11 @@ jobs:
         run: npm install
       - name: Build the app
         run: npm run build
-      - name: project deploy
-        run: echo "Deploying to production..."
+      # - name: project deploy
+      #   run: echo "Deploying to production..."
+      - name: Upload the result of the build
+        uses: actions/upload-artifact@v4
+        with:
+          name: mon-site
+          path: .next/ 
         
