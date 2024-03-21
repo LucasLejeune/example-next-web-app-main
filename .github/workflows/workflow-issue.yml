@@ -15,4 +15,9 @@ jobs:
   output: 
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Nouvelle issue - ${{ github.event.issue.title }}"
+      - name: sans venv
+        run: echo "Nouvelle issue - ${{ github.event.issue.title }}"
+      - name: avec venv
+        env: 
+         TITRE: ${{github.event.issue.title}}
+         run: echo "Nouvelle issue - $TITRE"
